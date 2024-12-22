@@ -27,7 +27,7 @@
               
               <div class="text-h6 font-medium mb-2">
                 <v-icon icon="mdi-card-account-phone" start></v-icon>
-                12345678901
+                15093195110
               </div>
 
              
@@ -43,7 +43,7 @@
               <div style="height: 10px;"></div>
               <div class="text-h6 font-medium mb-2">
                 <v-icon icon="mdi-card-account-mail" start></v-icon>
-                123123@gmail.com
+                15093195110@163.com
               </div>
 
              
@@ -59,7 +59,7 @@
               <div style="height: 10px;"></div>
               <div class="text-h6 font-medium mb-2">
                 <v-icon icon="mdi-map-marker" start></v-icon>
-                xxxxxxxxxxxxxxxx
+                河南省郑州市金水区姚砦路133号金成时代广场3号楼一层103,104号
               </div>
               
             </div>
