@@ -101,12 +101,14 @@
           <v-col cols="1"></v-col>
           <v-col cols="4">
             <div style="height: 100px;"></div>
-            <v-card style="height: 550px;" variant="text">
+            <v-card style="height: 600px;" variant="text">
               <v-card-title class="d-flex justify-start">
                 <h1>关于我们</h1>
               </v-card-title>
               <v-card-text class="d-flex justify-start">
-                内容
+                <div style="text-indent: 4ch;line-height: 3; font-size:x-large;">
+                河南今择栖医药有限公司成立于2023年5月15日，注册地位于河南省郑州市金水区姚砦路133号金成时代广场3号楼一层103、104号，是一家专业从事药品零售和保健品销售的企业，致力于为广大消费者提供优质的药品和专业的医疗保健服务。公司始终秉承“客户至上，品质第一”的经营理念，确保提供安全、可靠的药品和保健品。
+              </div>
               </v-card-text>
             </v-card>
           </v-col>
