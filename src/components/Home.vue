@@ -15,7 +15,7 @@
 
   <v-app>
 
-    <AppBar/>
+    <AppBar />
 
     <v-main>
       <v-container fluid>
@@ -55,7 +55,7 @@
               <v-card-text>
                 <div style="text-align: center;"> <!-- 中心对齐文字 -->
                   <h3>{{ item.title }}</h3>
-                  <p>{{ item.text }}</p>
+                  <!-- <p>{{ item.text }}</p> -->
                 </div>
               </v-card-text>
             </v-card>
@@ -107,12 +107,12 @@
               </v-card-title>
               <v-card-text class="d-flex justify-start">
                 <div style="text-indent: 4ch;line-height: 3; font-size:x-large;">
-                河南今择栖医药有限公司成立于2023年5月15日，注册地位于河南省郑州市金水区姚砦路133号金成时代广场3号楼一层103、104号，是一家专业从事药品零售和保健品销售的企业，致力于为广大消费者提供优质的药品和专业的医疗保健服务。公司始终秉承“客户至上，品质第一”的经营理念，确保提供安全、可靠的药品和保健品。
-              </div>
+                  河南今择栖医药有限公司成立于2023年5月15日，注册地位于河南省郑州市金水区姚砦路133号金成时代广场3号楼一层103、104号，是一家专业从事药品零售和保健品销售的企业，致力于为广大消费者提供优质的药品和专业的医疗保健服务。公司始终秉承“客户至上，品质第一”的经营理念，确保提供安全、可靠的药品和保健品。
+                </div>
               </v-card-text>
             </v-card>
           </v-col>
-          
+
           <v-col cols="6">
             <v-card variant="text" style="height: 700px;">
               <v-card-title class="d-flex justify-center">
@@ -141,32 +141,38 @@
 
 let prods = [
   {
-    title: '卡片 1',
-    text: '这是第一张卡片的内容。',
-    image: '../../static/1711181250147392.jpg'
+    title: '罗氏芬/注射用头孢曲松钠',
+    //text: '这是第三张卡片的内容。',
+    image: '../../static/product/罗氏芬1g.jpg'
   },
   {
-    title: '卡片 2',
-    text: '这是第二张卡片的内容。',
-    image: '../../static/1711181445925025.jpg'
+    title: '罗氏芬/注射用头孢曲松钠',
+    //text: '这是第三张卡片的内容。',
+    image: '../../static/product/罗氏芬0.5g.jpg'
   },
   {
-    title: '卡片 3',
-    text: '这是第三张卡片的内容。',
-    image: '../../static/背景图片.png'
-  }
+    title: '舒普深/注射用头孢哌酮钠舒巴坦钠',
+    //text: '这是第三张卡片的内容。',
+    image: '../../static/product/舒普深.jpg'
+  },
 ]
 
 let prodPosterss = [
-  {
-    image: '../../static/1711181250147392.jpg'
+{
+    //title: '罗氏芬/注射用头孢曲松钠',
+    //text: '这是第三张卡片的内容。',
+    image: '../../static/product/罗氏芬1g.jpg'
   },
   {
-    image: '../../static/1711181445925025.jpg'
+    //title: '罗氏芬/注射用头孢曲松钠',
+    //text: '这是第三张卡片的内容。',
+    image: '../../static/product/罗氏芬0.5g.jpg'
   },
   {
-    image: '../../static/背景图片.png'
-  }
+    //title: '舒普深/注射用头孢哌酮钠舒巴坦钠',
+    //text: '这是第三张卡片的内容。',
+    image: '../../static/product/舒普深.jpg'
+  },
 ]
 
 let items = [

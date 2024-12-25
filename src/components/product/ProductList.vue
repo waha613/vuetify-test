@@ -3,7 +3,7 @@
   <v-container>
     <v-row>
       <v-col cols="2">
-        <v-select clearable label="选择分类" :items="['分类一', '分类二', '分类三']" variant="solo" v-model="selectedItem"
+        <v-select clearable label="选择分类" :items="['心脑血管', '生物制品类', '抗生素类', '儿科类']" variant="solo" v-model="selectedItem"
           @change="changeType"></v-select>
       </v-col>
       <v-col cols="2">
@@ -68,40 +68,60 @@ interface Product {
 // 定义 prods 数组
 const prods: Product[] = [
   {
-    type: '分类一',
+    type: '心脑血管',
     details: [
       {
-        title: '产品 1',
-        text: '这是第一张卡片的内容。',
-        image: '../../static/1711181250147392.jpg'
+        title: '天舒平/奥美沙坦脂氨氯地平片',
+        //text: '这是第一张卡片的内容。',
+        image: '../../static/product/天舒平.jpg'
+      } as Detail,
+    ]
+  } as Product,
+  {
+    type: '生物制品类',
+    details: [
+      {
+        title: '人血白蛋白',
+        //text: '这是第二张卡片的内容。',
+        image: '../../static/product/人血白蛋白.jpg'
+      } as Detail
+    ]
+  } as Product,
+  {
+    type: '抗生素类',
+    details: [
+      {
+        title: '罗氏芬/注射用头孢曲松钠',
+        //text: '这是第三张卡片的内容。',
+        image: '../../static/product/罗氏芬1g.jpg'
       } as Detail,
       {
-        title: '产品 1.1',
-        text: '这是第一张卡片的内容。',
-        image: '../../static/1711181250147392.jpg'
-      } as Detail
+        title: '罗氏芬/注射用头孢曲松钠',
+        //text: '这是第三张卡片的内容。',
+        image: '../../static/product/罗氏芬0.5g.jpg'
+      } as Detail,
+      {
+        title: '舒普深/注射用头孢哌酮钠舒巴坦钠',
+        //text: '这是第三张卡片的内容。',
+        image: '../../static/product/舒普深.jpg'
+      } as Detail,
+      {
+        title: '特治星/注射用哌拉西林钠他唑巴坦钠',
+        //text: '这是第三张卡片的内容。',
+        image: '../../static/product/特治星.jpg'
+      } as Detail,
     ]
   } as Product,
   {
-    type: '分类二',
+    type: '儿科类',
     details: [
       {
-        title: '产品 2',
-        text: '这是第二张卡片的内容。',
-        image: '../../static/1711181445925025.jpg'
-      } as Detail
+        title: '小儿消积止咳口服液',
+        //text: '这是第一张卡片的内容。',
+        image: '../../static/product/小儿消积止咳口服液.jpg'
+      } as Detail,
     ]
   } as Product,
-  {
-    type: '分类三',
-    details: [
-      {
-        title: '产品 3',
-        text: '这是第三张卡片的内容。',
-        image: '../../static/背景图片.png'
-      } as Detail
-    ]
-  } as Product
 ];
 
 function checkType(value: String) {
