@@ -19,7 +19,7 @@
       class="text-caption text-disabled"
       style="position: absolute; left: 16px;"
     >
-      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">河南甯康颐合健康咨询有限公司</span>
+      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">河南今择栖医药有限公司</span>
       —
       <a
         class="text-decoration-none on-surface"

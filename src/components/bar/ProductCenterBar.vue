@@ -1,28 +1,31 @@
 <template>
   <div class="text-center">
-    <v-menu open-on-hover>
-      <template v-slot:activator="{ props }">
-        <v-btn class="ms-1" color="medium-emphasis" size="large" v-bind="props" to="/productCenter">
-          {{title}}
-          <v-icon icon="mdi-menu-down" end></v-icon>
-        </v-btn>
+    <!-- <v-menu open-on-hover>
+      <template v-slot:activator="{ props }"> -->
+    <!-- <v-btn class="ms-1" color="medium-emphasis" size="large" v-bind="props" to="/productCenter"> -->
+    <!-- {{title}} -->
+    <!-- <v-icon icon="mdi-menu-down" end></v-icon> -->
+    <!-- </v-btn> -->
 
-      </template>
-      <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index">
-          <div v-if=item.title>
-            <v-btn variant="text">{{item.title}}</v-btn>
-          </div>
-          <div v-if=item.subheader class="text start">
-            <h5>{{ item.subheader }}</h5>
-          </div>
-          <div v-if=item.divider>
-            <v-divider class="border-opacity-10"></v-divider>
-          </div>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+    <!-- </template>
+<v-list>
+  <v-list-item v-for="(item, index) in items" :key="index">
+    <div v-if=item.title>
+      <v-btn variant="text">{{item.title}}</v-btn>
+    </div>
+    <div v-if=item.subheader class="text start">
+      <h5>{{ item.subheader }}</h5>
+    </div>
+    <div v-if=item.divider>
+      <v-divider class="border-opacity-10"></v-divider>
+    </div>
+  </v-list-item>
+</v-list>
+</v-menu> -->
 
+    <v-btn class="ms-1" color="medium-emphasis" size="large" to="/productCenter">
+      {{ title }}
+    </v-btn>
   </div>
   <!-- <v-btn class="ms-1" color="medium-emphasis" size="large">
 

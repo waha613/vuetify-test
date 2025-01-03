@@ -19,12 +19,12 @@
 
     <v-main>
       <v-container fluid>
-        <v-carousel show-arrows="hover" height="500px" :cycle="true" :interval="3000">
-          <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover></v-carousel-item>
+        <v-carousel show-arrows="hover" height="700px" :cycle="true" :interval="3000">
+          <v-carousel-item src="../../static/product/轮播一.jpg" cover></v-carousel-item>
 
-          <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg" cover></v-carousel-item>
+          <v-carousel-item src="../../static/product/轮播2.jpg" cover></v-carousel-item>
 
-          <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-carousel-item>
+          <v-carousel-item src="../../static/product/轮播3.jpg" cover></v-carousel-item>
         </v-carousel>
 
       </v-container>
@@ -179,17 +179,17 @@ let items = [
   {
     title: '轮播图 1',
     text: '这是第一张轮播图的内容。',
-    image: 'https://via.placeholder.com/800x400/FF5733/FFFFFF?text=轮播图+1'
+    image: '../../static/product/轮播一.jpg'
   },
   {
     title: '轮播图 2',
     text: '这是第二张轮播图的内容。',
-    image: 'https://via.placeholder.com/800x400/33FF57/FFFFFF?text=轮播图+2'
+    image: '../../static/product/轮播2.jpg'
   },
   {
     title: '轮播图 3',
     text: '这是第三张轮播图的内容。',
-    image: 'https://via.placeholder.com/800x400/3357FF/FFFFFF?text=轮播图+3'
+    image: '../../static/product/轮播3.jpg'
   }
 ]
 

@@ -75,6 +75,11 @@ const prods: Product[] = [
         //text: '这是第一张卡片的内容。',
         image: '../../static/product/天舒平.jpg'
       } as Detail,
+      {
+        title: '安宫牛黄丸',
+        //text: '这是第一张卡片的内容。',
+        image: '../../static/product/安宫牛黄丸.jpg'
+      } as Detail,
     ]
   } as Product,
   {
