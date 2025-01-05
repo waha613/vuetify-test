@@ -19,15 +19,15 @@
       class="text-caption text-disabled"
       style="position: absolute; left: 16px;"
     >
-      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">河南今择栖医药有限公司</span>
-      —
+      &copy; 2023-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">河南今择栖医药有限公司</span>
+      <!-- — -->
       <a
         class="text-decoration-none on-surface"
         href="https://vuetifyjs.com/about/licensing/"
         rel="noopener noreferrer"
         target="_blank"
       >
-      豫ICP备2024100560号-1
+      <!-- 豫ICP备2024100560号-1 -->
       </a>
     </div>
   </v-footer>

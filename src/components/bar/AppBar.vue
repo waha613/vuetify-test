@@ -13,8 +13,8 @@
           <v-btn variant="text" class="ms-1" color="medium-emphasis" size="large" to="/">网站首页</v-btn>
           <AboutUs />
           <ProductCenter />
-          <News />
-          <Fee />
+          <!-- <News />
+          <Fee /> -->
           <ContactUs />
 
         
