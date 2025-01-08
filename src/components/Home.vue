@@ -56,6 +56,9 @@
                 <div style="text-align: center;"> <!-- 中心对齐文字 -->
                   <h3>{{ item.title }}</h3>
                   <!-- <p>{{ item.text }}</p> -->
+                  <p>{{ item.common1 }}</p>
+                  <p>{{ item.common2 }}</p>
+                  <p>{{ item.common3 }}</p>
                 </div>
               </v-card-text>
             </v-card>
@@ -143,22 +146,31 @@ let prods = [
   {
     title: '罗氏芬/注射用头孢曲松钠',
     //text: '这是第三张卡片的内容。',
+    common1: '规格：1克',
+    common2: '剂型：粉剂',
+    common3: '批准文号：国药准字H10983036',
     image: '../../static/product/罗氏芬1g.jpg'
   },
   {
     title: '罗氏芬/注射用头孢曲松钠',
     //text: '这是第三张卡片的内容。',
+    common1: '规格：0.5克',
+    common2: '剂型：粉针剂',
+    common3: '批准文号：国药准字H10983037',
     image: '../../static/product/罗氏芬0.5g.jpg'
   },
   {
     title: '舒普深/注射用头孢哌酮钠舒巴坦钠',
     //text: '这是第三张卡片的内容。',
+    common1: '规格：1.5g',
+    common2: '剂型：粉针剂',
+    common3: '批准文号：国药准字H20020597',
     image: '../../static/product/舒普深.jpg'
   },
 ]
 
 let prodPosterss = [
-{
+  {
     //title: '罗氏芬/注射用头孢曲松钠',
     //text: '这是第三张卡片的内容。',
     image: '../../static/product/罗氏芬1g.jpg'
