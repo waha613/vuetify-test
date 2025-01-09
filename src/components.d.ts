@@ -13,7 +13,6 @@ declare module 'vue' {
     ContactUsBar: typeof import('./components/bar/ContactUsBar.vue')['default']
     ContactUsContent: typeof import('./components/contact_us/ContactUsContent.vue')['default']
     FeeBar: typeof import('./components/bar/FeeBar.vue')['default']
-    FeeInfo: typeof import('./pages/feeInfo.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Home: typeof import('./components/Home.vue')['default']
     NewsBar: typeof import('./components/bar/NewsBar.vue')['default']

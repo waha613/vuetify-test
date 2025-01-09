@@ -20,11 +20,11 @@
     <v-main>
       <v-container fluid>
         <v-carousel show-arrows="hover" height="700px" :cycle="true" :interval="3000">
-          <v-carousel-item src="../../static/product/轮播一.jpg" cover></v-carousel-item>
+          <v-carousel-item v-for="(item, index) in mainCarousel" :key="index" :src="item.image" cover></v-carousel-item>
 
-          <v-carousel-item src="../../static/product/轮播2.jpg" cover></v-carousel-item>
+          <!-- <v-carousel-item src="../../static/product/轮播2.jpg" cover></v-carousel-item>
 
-          <v-carousel-item src="../../static/product/轮播3.jpg" cover></v-carousel-item>
+          <v-carousel-item src="../../static/product/轮播3.jpg" cover></v-carousel-item> -->
         </v-carousel>
 
       </v-container>
@@ -50,15 +50,15 @@
           <v-col cols="4" v-for="(item, index) in prods" :key="index">
             <v-card hover style="height: 550px;" variant="text">
               <v-card-title class="d-flex justify-center">
-                <v-img :src="item.image" width="450" height="450" contain></v-img>
+                <v-img :src="item.prodImgAddress" width="450" height="450" contain></v-img>
               </v-card-title>
               <v-card-text>
                 <div style="text-align: center;"> <!-- 中心对齐文字 -->
-                  <h3>{{ item.title }}</h3>
+                  <h3>{{ item.prodTitle }}</h3>
                   <!-- <p>{{ item.text }}</p> -->
-                  <p>{{ item.common1 }}</p>
-                  <p>{{ item.common2 }}</p>
-                  <p>{{ item.common3 }}</p>
+                  <p>{{ item.prodCommon1 }}</p>
+                  <p>{{ item.prodCommon2 }}</p>
+                  <p>{{ item.prodCommon3 }}</p>
                 </div>
               </v-card-text>
             </v-card>
@@ -84,7 +84,7 @@
           <v-col cols="4" v-for="(item, index) in prodPosterss" :key="index">
             <v-card hover style="height: 550px;" variant="text">
               <v-card-title class="d-flex justify-center">
-                <v-img :src="item.image" width="550" height="550" contain></v-img>
+                <v-img :src="item.prodImgAddress" width="550" height="550" contain></v-img>
               </v-card-title>
             </v-card>
           </v-col>
@@ -106,11 +106,11 @@
             <div style="height: 100px;"></div>
             <v-card style="height: 600px;" variant="text">
               <v-card-title class="d-flex justify-start">
-                <h1>关于我们</h1>
+                <h1>{{mainAboutUs?.title }}</h1>
               </v-card-title>
               <v-card-text class="d-flex justify-start">
                 <div style="text-indent: 4ch;line-height: 3; font-size:x-large;">
-                  河南今择栖医药有限公司成立于2023年5月15日，注册地位于河南省郑州市金水区姚砦路133号金成时代广场3号楼一层103、104号，是一家专业从事药品零售和保健品销售的企业，致力于为广大消费者提供优质的药品和专业的医疗保健服务。公司始终秉承“客户至上，品质第一”的经营理念，确保提供安全、可靠的药品和保健品。
+                  {{ mainAboutUs?.descbsion }}
                 </div>
               </v-card-text>
             </v-card>
@@ -119,7 +119,7 @@
           <v-col cols="6">
             <v-card variant="text" style="height: 700px;">
               <v-card-title class="d-flex justify-center">
-                <v-img src="../../static/1713624894495518.jpg" width="100%" height="700" contain></v-img>
+                <v-img :src="mainAboutUs?.image" width="100%" height="700" contain></v-img>
               </v-card-title>
             </v-card>
           </v-col>
@@ -140,70 +140,29 @@
 
 
 <script setup lang="ts">
+import { mainProdCenterData, mainProdPostersData, mainAboutUsData, type mainAboutUsResD, mainCarouselData, type mainCarouselResD, type mainProdCenterDataRes, type mainProdCenterDataResD } from '../api'; // 导入 API
+import { ref, onMounted } from 'vue';
 
+const prods = ref<mainProdCenterDataResD[] | null>(null);
+const prodPosterss = ref<mainProdCenterDataResD[] | null>(null);
+const mainAboutUs = ref<mainAboutUsResD | null>(null);
+const mainCarousel = ref<mainCarouselResD[] | null>(null);
 
-let prods = [
-  {
-    title: '罗氏芬/注射用头孢曲松钠',
-    //text: '这是第三张卡片的内容。',
-    common1: '规格：1克',
-    common2: '剂型：粉剂',
-    common3: '批准文号：国药准字H10983036',
-    image: '../../static/product/罗氏芬1g.jpg'
-  },
-  {
-    title: '罗氏芬/注射用头孢曲松钠',
-    //text: '这是第三张卡片的内容。',
-    common1: '规格：0.5克',
-    common2: '剂型：粉针剂',
-    common3: '批准文号：国药准字H10983037',
-    image: '../../static/product/罗氏芬0.5g.jpg'
-  },
-  {
-    title: '舒普深/注射用头孢哌酮钠舒巴坦钠',
-    //text: '这是第三张卡片的内容。',
-    common1: '规格：1.5g',
-    common2: '剂型：粉针剂',
-    common3: '批准文号：国药准字H20020597',
-    image: '../../static/product/舒普深.jpg'
-  },
-]
-
-let prodPosterss = [
-  {
-    //title: '罗氏芬/注射用头孢曲松钠',
-    //text: '这是第三张卡片的内容。',
-    image: '../../static/product/罗氏芬1g.jpg'
-  },
-  {
-    //title: '罗氏芬/注射用头孢曲松钠',
-    //text: '这是第三张卡片的内容。',
-    image: '../../static/product/罗氏芬0.5g.jpg'
-  },
-  {
-    //title: '舒普深/注射用头孢哌酮钠舒巴坦钠',
-    //text: '这是第三张卡片的内容。',
-    image: '../../static/product/舒普深.jpg'
-  },
-]
-
-let items = [
-  {
-    title: '轮播图 1',
-    text: '这是第一张轮播图的内容。',
-    image: '../../static/product/轮播一.jpg'
-  },
-  {
-    title: '轮播图 2',
-    text: '这是第二张轮播图的内容。',
-    image: '../../static/product/轮播2.jpg'
-  },
-  {
-    title: '轮播图 3',
-    text: '这是第三张轮播图的内容。',
-    image: '../../static/product/轮播3.jpg'
+const loadData = async () => {
+  try {
+    prods.value = await mainProdCenterData(); // 调用 API 获取数据
+    prodPosterss.value = await mainProdPostersData();
+    mainAboutUs.value = await mainAboutUsData(); // 调用 API 获取数据
+    mainCarousel.value = await mainCarouselData();
+    console.info(prods)
+  } catch (error) {
+    console.error('数据加载失败:', error);
   }
-]
+};
+
+onMounted(() => {
+  loadData(); // 组件挂载时加载数据
+});
 
 </script>
 
