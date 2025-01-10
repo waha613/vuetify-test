@@ -9,13 +9,7 @@
 
                 <v-card-text style="background-color: #efefef;">
                     <div style="text-indent: 4ch;line-height: 3; font-size:larger;">
-                    <p>您好，尊敬的客户：</p>
-                    <p>如果贵司想在我公司平台推广相关药品或二类医疗器械产品信息，可在我公司平台上注册会员(联系客服线下充值)。</p>
-                    <p>会员收费标准：</p>
-                    <p>普通会员产品推广费用：799￥/年；权限：可在平台推广10个产品；</p>
-                    <p>高级会员产品推广费用：999￥/年；权限：可在平台推广20个产品；</p>
-                    <p>至尊会员产品推广费用：1199￥/年；权限：可在平台推广30个产品；</p>
-                    <p>注：会员有效期为一年，为避免产品下架影响推广，建议生产商家提前一个月续费！若逾期未及时续费，平台将终止会员所有权利，下架产品。</p>
+                        <div v-html="feeService?.content"></div>
                 </div>
                 </v-card-text>
 
@@ -31,5 +25,19 @@
 </template>
 
 <script setup lang="ts">
+import { feeServiceData, type feeServiceResD} from '../api'; // 导入 API
+import { ref, onMounted } from 'vue';
+const feeService = ref<feeServiceResD | null>(null);
 
+const loadData = async () => {
+    try {
+        feeService.value = await feeServiceData(); // 调用 API 获取数据
+    } catch (error) {
+        console.error('数据加载失败:', error);
+    }
+};
+
+onMounted(() => {
+    loadData(); // 组件挂载时加载数据
+});
 </script>

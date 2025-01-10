@@ -6,9 +6,9 @@
         <!-- 分区标题 -->
         <v-card-title class="text-center justify-center py-11">
           <h1 class="font-weight-bold text-h4">
-            联系信息
+            {{ contactUs?.title }}
           </h1>
-          <v-card-text style="color: #b0b0b0;">能为您服务是我们的荣幸!</v-card-text>
+          <v-card-text style="color: #b0b0b0;">{{ contactUs?.content }}</v-card-text>
         </v-card-title>
 
         <!-- 标题与内容分界线 -->
@@ -27,7 +27,7 @@
               
               <div class="text-h6 font-medium mb-2">
                 <v-icon icon="mdi-card-account-phone" start></v-icon>
-                15093195110
+                {{ contactUs?.phoneNumber }}
               </div>
 
              
@@ -43,7 +43,7 @@
               <div style="height: 10px;"></div>
               <div class="text-h6 font-medium mb-2">
                 <v-icon icon="mdi-card-account-mail" start></v-icon>
-                15093195110@163.com
+                {{ contactUs?.email }}
               </div>
 
              
@@ -59,7 +59,7 @@
               <div style="height: 10px;"></div>
               <div class="text-h6 font-medium mb-2">
                 <v-icon icon="mdi-map-marker" start></v-icon>
-                河南省郑州市金水区姚砦路133号金成时代广场3号楼一层103,104号
+                {{ contactUs?.address }}
               </div>
               
             </div>
@@ -73,5 +73,19 @@
 </template>
 
 <script setup lang="ts">
+import { contactUsData, type contactUsResD} from '../../api'; // 导入 API
+import { ref, onMounted } from 'vue';
+const contactUs = ref<contactUsResD | null>(null);
 
+const loadData = async () => {
+    try {
+      contactUs.value = await contactUsData(); // 调用 API 获取数据
+    } catch (error) {
+        console.error('数据加载失败:', error);
+    }
+};
+
+onMounted(() => {
+    loadData(); // 组件挂载时加载数据
+});
 </script>
