@@ -9,7 +9,6 @@
     <title>河南今择栖医药有限公司</title>
     <meta name="keywords" content="河南今择栖医药有限公司">
     <meta name="description" content="河南今择栖医药有限公司">
-    <meta name="author" content="www.adminbuy.cn K522">
   </head>
 
 
